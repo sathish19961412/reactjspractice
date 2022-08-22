@@ -1,0 +1,75 @@
+
+.App {
+  text-align: center;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.App3
+{
+  float:center;
+}
+#banner
+{
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+.banner-haead-1
+{
+  color: #2f7ad7;
+  font-size: 39px;
+  font-weight: bold;
+  /* max-width: 719px; */
+  text-align: justify;
+  line-height: 50px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.para-1
+{
+    text-align: justify;
+    line-height: 25px;
+    text-transform: capitalize;
+    width: 68%;
+    font-weight: 500;
+}
+.gp-1
+{
+  position: absolute;
+}
+.banner-haead-2
+{
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
