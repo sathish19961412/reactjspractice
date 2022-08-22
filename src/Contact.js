@@ -1,5 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import { Fragment } from "react";
 import {Link} from "react-router-dom";
 export default function Contacts()
@@ -32,18 +34,34 @@ export default function Contacts()
                   <div className='col-md-3'>&nbsp;</div>
                   <div className='col-md-6 mt-5'>
                   <Form>
+                    <Row>
+                        <Col md={6}>
+                            <Form.Control placeholder="City" />
+                            </Col>
+                            <Col md={6}>
+                            <Form.Control placeholder="State" />
+                        </Col>
+                    </Row>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label className='d-flex'>Name</Form.Label>
+                        <Form.Control type="email" placeholder="Enter Name" /><br></br>
+
                         <Form.Label className='d-flex'>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label  className='d-flex'>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Label  className='d-flex'>Mobile Number</Form.Label>
+                        <Form.Control type="text" placeholder="Mobile Number" /><br></br>
+
+                        <Form.Label className='d-flex'>Address</Form.Label>
+                        <Form.Control type="email" placeholder="Enter Address" />
                     </Form.Group>
+
                     <Button variant="primary" type="submit" className='d-flex'>
                         Submit
                     </Button>
+                    
                   </Form>
                   </div>
                   <div className='col-md-3'>&nbsp;</div>

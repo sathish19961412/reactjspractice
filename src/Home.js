@@ -19,9 +19,9 @@ export default function Home()
         {obj.section1.subtitle}
         </>
       })
-      const images= data.map((obj) => {
+      const images= data.map((k) => {
         return <>
-        {obj.section1.images}
+        {k.section1.images}
         </>
       })
       return(
@@ -59,7 +59,14 @@ export default function Home()
             </div>
         </div>
         <div className='col-md-6'>
-             <img src={logo} className="img-fluid" />
+            {
+              data && data.map(record =>{
+                return(
+                    <img src={record.section1.images} />
+                )
+              })
+            }
+               
         </div>
       </div>
   </div>
