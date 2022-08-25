@@ -1,4 +1,4 @@
-import logo from './bannerimage.avif';
+import images1 from './bannerimage.avif';
 import logo1 from './googleplay.png';
 import logo2 from './applestore.png';
 import data from './data/Homedata.json';
@@ -13,15 +13,15 @@ export default function Home()
         {obj.section1.title}
         </>
       })
-      const subtitle = data.map((obj) => {
+      const subtitle = data.map((k) => {
 
         return <>
-        {obj.section1.subtitle}
+        {k.section1.subtitle}
         </>
       })
-      const images= data.map((k) => {
+      const images= data.map((obj) => {
         return <>
-        {k.section1.images}
+        {obj.section1.images}
         </>
       })
       return(
@@ -39,6 +39,9 @@ export default function Home()
       </li>
       <li class="nav-item">
         <Link to="/contact" class="nav-link">Contact</Link>
+      </li>
+      <li class="nav-item">
+        <Link to="/contact1" class="nav-link">Contact1</Link>
       </li>
     </ul>
   </div>
@@ -59,14 +62,7 @@ export default function Home()
             </div>
         </div>
         <div className='col-md-6'>
-            {
-              data && data.map(record =>{
-                return(
-                    <img src={record.section1.images} />
-                )
-              })
-            }
-               
+            <img src={images1}   alt="logo" />
         </div>
       </div>
   </div>
