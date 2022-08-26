@@ -1,10 +1,9 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import './assets/css/bootstrap.min.css';
 import {useRef} from "react";
 import { Fragment, useState} from "react";
+import emailjs from '@emailjs/browser';
+import data from './data/Homedata.json';
 import {Link} from "react-router-dom";
 
 export default function Contacts()
@@ -32,6 +31,101 @@ export default function Contacts()
           [name]: value
       }))
     }
+
+
+     const fnameValidation = fname => {
+          const fnamekey= /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+          if(!fname.trim()){
+            setFnameError('First Name is required!..')
+        }
+        else if(!fname.match(fnamekey)){
+            setFnameError('Please ingress a valid Firstname..')
+        }
+        else{
+            setFnameError('')
+        }
+    }
+
+    const lnameValidation = lname =>{
+      const lnamekey=/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+      if(!lname.trim()){
+          setLnameError("Last Name is required!..")
+      }
+      else if(!lname.match(lnamekey)){
+         setLnameError('Please ingress a valid Last Name ..')
+      }
+      else{
+        setLnameError('')
+      }
+    }
+    
+    const emailValidation = email =>{
+         const emailKey=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+         if(!email.trim()){
+           setEmailError('Email is required !..')
+         }
+         else if(!email.match(emailKey)){
+            setEmailError('Please ingress a valid Email address ..')
+         }
+         else{
+          setEmailError('')
+         }
+    }
+
+    const mobileValidation = mobile =>{
+        const mobileKey=/^(\+\d{1,3}[- ]?)?\d{10}$/;
+        if(!mobile.trim()){
+            setMobileError('Mobile is required !..')
+        }
+        else if(!mobile.match(mobileKey)){
+            setMobileError('Mobile is ingress a valid Mobile')
+        }
+        else{
+            setMobileError('')
+        }
+    }
+    
+    const messageValidation = message =>{
+         if(!message.trim()){
+            setMessageError('message is required !..')
+         }
+         else{
+            setMessageError('')
+         }
+    }
+    const form = useRef();
+
+    const sendEmailToUser = () =>{
+
+        emailjs.sendForm('service_pz4z1z4', 'template_vbnscjs', form.current, 'DC9qaXQtPDMTem0tt')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+
+    }
+    const ClearAllData =() => {
+         setState({
+            fname :'',
+            lname :'',
+            email : '',
+            mobile : '',
+            message : ''
+         })
+
+    }
+    const sendDataToMail = (e) => {
+      e.preventDefault();
+      fnameValidation(state.fname);
+      lnameValidation(state.lname);
+      emailValidation(state.email);
+      mobileValidation(state.mobile);
+      messageValidation(state.message);
+      sendEmailToUser();
+      ClearAllData();
+    }
+
     return(
         <Fragment>
           <nav class="navbar navbar-expand-lg navbar-light">
@@ -48,9 +142,6 @@ export default function Contacts()
       <li class="nav-item">
         <Link to="/contact" class="nav-link">Contact</Link>
       </li>
-      <li class="nav-item">
-        <Link to="/contact1" class="nav-link">Contact1</Link>
-      </li>
     </ul>
   </div>
 </nav>
@@ -58,42 +149,98 @@ export default function Contacts()
             <div className='container'>
                 <div className='row'>
                   <div className='col-md-12 mt-5'>
-                      <h1 className='banner-haead-1 text-center'>Contact us</h1>
+                      <h1 className='banner-haead-1 text-center'>
+                         {data[0].contactus.title}
+                      </h1>
                   </div>
                   <div className='col-md-3'>&nbsp;</div>
                   <div className='col-md-6 mt-5'>
-                  <Form>
-                    <Row>
-                         <Col md={12}>
-                            <Form.Label className='d-flex'>Firstname</Form.Label>
-                            <Form.Control placeholder="Firstname" id="thename" />
-                          </Col>
-                    </Row>
-                    <Row className="mt-3" controlId="formBasicEmail">
-                      <Col md={12}>
-                        <Form.Label className='d-flex'>Enter Email</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" id="themail" />
-                      </Col>
+                  <div className="form-content">
+                                    <form id="contactForm" ref={form} onSubmit={sendDataToMail} data-aos="fade-up">
+                                        <div className="form-row">
+                                            <div className="col-md-6">
+                                                <div className="form-group">
+                                                    <label htmlFor="inputName" className="">
+                                                        {data[0].contactus.firstname}
+                                                    </label>
+                                                    <input type="text"
+                                                           className="form-control email-input"
+                                                           name="fname"
+                                                           id="fname"
+                                                           placeholder="Enter your first name"
+                                                           value={state.user_name}
+                                                           onChange={handleChange}
+                                                    />
+                                                </div>
+                                            </div> 
+                                            <br/>
+                                            <div className="col-md-6">
+                                                <div className="form-group">
+                                                    <label htmlFor="inputName" className="text-style">
+                                                       {data[0].contactus.Lastname}
+                                                    </label>
+                                                    <input type="text"
+                                                           className="form-control email-input"
+                                                           name="lname"
+                                                           id="lname"
+                                                           placeholder="Enter your last name"
+                                                           value={state.lname}
+                                                           onChange={handleChange}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div className="form-row">
+                                            <div className="form-group col-md-6">
+                                                <label htmlFor="inputEmail4 " className="text-style">
+                                                    {data[0].contactus.Email}
+                                                </label>
+                                                <input type="email"
+                                                       className="form-control email-input"
+                                                       name="email"
+                                                       id="email"
+                                                       placeholder="Enter email"
+                                                       value={state.email}
+                                                       onChange={handleChange}
+                                                />
+                                            </div>
+                                            <div className="form-group col-md-6">
+                                                <label htmlFor="inputEmail4 " className="text-style">
+                                                    {data[0].contactus.Mobile}
+                                                </label>
+                                                <input type="text"
+                                                       className="form-control email-input"
+                                                       name="mobile"
+                                                       id="mobile"
+                                                       placeholder="Enter Mobile"
+                                                       value={state.mobile}
+                                                       onChange={handleChange}
+                                                />
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <br/>
+                                        <div className="form-group">
+                                            <label htmlFor="exampleFormControlTextarea1"  className="text-style">
+                                                {data[0].contactus.Message}
+                                            </label>
+                                            <textarea type="text" className="form-control description"
+                                                      id="message"
+                                                      onChange={handleChange}
+                                                      name="message"
+                                                      value={state.message}
+                                                      rows="3">
+                                            </textarea>
+                                        </div>
 
-                    </Row>
-                    <Row className="mt-3" controlId="formBasicEmail">
-                      <Col md={12}>
-                        <Form.Label className='d-flex'>Mobile</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Mobile" id="themobile" />
-                      </Col>
+                                        <br/><br/>
 
-                    </Row>
-                    <Row className="mt-3" controlId="formBasicEmail">
-                      <Col md={12}>
-                        <Form.Label className='d-flex'>Message</Form.Label>
-                        <Form.Control type="text" placeholder="Message" id="themsg" />
-                      </Col>
-
-                    </Row>
-                    <Button variant="primary" type="submit" className='d-flex mt-3' onCLick="sendemail();">
-                        Submit
-                    </Button>
-                  </Form>
+                                        <button type="submit" className="btn btn-primary">
+                                            {data[0].contactus.ButtonText}
+                                        </button>
+                                    </form>
+                                </div>
                   </div>
                   <div className='col-md-3'>&nbsp;</div>
                 </div>
@@ -103,3 +250,4 @@ export default function Contacts()
           </Fragment>
     );
 }
+

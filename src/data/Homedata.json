@@ -7,9 +7,15 @@
         "images":"./bannerimage.avif"
         },
 
-        "section2": 
+        "contactus" : 
         {
-        
+          "title": "Contact Us",
+          "firstname":"First Name",
+          "Lastname" :"Last Name",
+          "Email" :"Email Address",
+          "Mobile":"Mobile Number",
+          "Message":"Message",
+          "ButtonText":"Submit"
         }
     }
 ]

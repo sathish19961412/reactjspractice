@@ -7,23 +7,6 @@ import { Fragment } from "react";
 import {Link} from "react-router-dom";
 export default function Home()
 {
-    const titles = data.map((obj) => {
-
-        return <>
-        {obj.section1.title}
-        </>
-      })
-      const subtitle = data.map((k) => {
-
-        return <>
-        {k.section1.subtitle}
-        </>
-      })
-      const images= data.map((obj) => {
-        return <>
-        {obj.section1.images}
-        </>
-      })
       return(
         <Fragment>
          <nav class="navbar navbar-expand-lg navbar-light">
@@ -40,9 +23,6 @@ export default function Home()
       <li class="nav-item">
         <Link to="/contact" class="nav-link">Contact</Link>
       </li>
-      <li class="nav-item">
-        <Link to="/contact1" class="nav-link">Contact1</Link>
-      </li>
     </ul>
   </div>
 </nav>
@@ -50,8 +30,8 @@ export default function Home()
   <div className='container'>
       <div className='row'>
         <div className='col-md-6 mt-5'>
-            <h1 className='banner-haead-1'>{ titles }</h1>
-            <h5 className='para-1'>{subtitle}</h5>
+            <h1 className='banner-haead-1'>{data[0].section1.title}</h1>
+            <h5 className='para-1'>{data[0].section1.subtitle}</h5>
             <div className='mt-5'>
                 <div className='gp-1'>
                   <img src={logo1}  alt="logo" />

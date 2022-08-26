@@ -45,7 +45,7 @@ export default function Contactus(){
             setFnameError('First Name is required!..')
         }
         else if(!fname.match(fnameKey)){
-            setFnameError('Please ingress a valid email address!..')
+            setFnameError('Please ingress a valid firstname !..')
         }
         else{
             setFnameError('');
