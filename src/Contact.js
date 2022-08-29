@@ -5,6 +5,7 @@ import { Fragment, useState} from "react";
 import emailjs from '@emailjs/browser';
 import data from './data/Homedata.json';
 import {Link} from "react-router-dom";
+import Footer  from './Footer';
 
 export default function Contacts()
 {
@@ -117,6 +118,7 @@ export default function Contacts()
     }
     const sendDataToMail = (e) => {
       e.preventDefault();
+      
       fnameValidation(state.fname);
       lnameValidation(state.lname);
       emailValidation(state.email);
@@ -129,7 +131,7 @@ export default function Contacts()
     return(
         <Fragment>
           <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">Logo</a>
+  <a class="navbar-brand" href="#">TestApp</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -138,6 +140,9 @@ export default function Contacts()
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <Link to="/" class="nav-link">Home <span class="sr-only">(current)</span></Link>
+      </li>
+      <li class="nav-item">
+         <Link to="/about" class="nav-link">About Us</Link>
       </li>
       <li class="nav-item">
         <Link to="/contact" class="nav-link">Contact</Link>
@@ -247,6 +252,7 @@ export default function Contacts()
             </div>
 
           </section>
+          <Footer></Footer>
           </Fragment>
     );
 }
