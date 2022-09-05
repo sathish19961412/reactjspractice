@@ -9,7 +9,7 @@
 }
 .navbar-light .navbar-nav .nav-link
 {
-    text-indent: 96px;
+    text-indent: 20px;
     color:#ffffff;
     font-weight: bold;
 }
@@ -25,7 +25,6 @@
 }
 .navbar-light .navbar-brand
 {
-    background: #ffffff;
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 2%;
