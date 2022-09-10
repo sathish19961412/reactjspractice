@@ -4,32 +4,12 @@ import { Table } from 'react-bootstrap';
 import './App.css';
 import {Link} from "react-router-dom";
 import Footer  from './Footer';
-
+import Header  from './Header';
 export default function Home()
 {
       return(
         <Fragment>
-         <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">TestApp</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <Link to="/" class="nav-link">Home <span class="sr-only">(current)</span></Link>
-      </li>
-      <li class="nav-item">
-         <Link to="/about" class="nav-link">About Us</Link>
-      </li>
-      <li class="nav-item">
-        <Link to="/contact" class="nav-link">Contact</Link>
-      </li>
-
-    </ul>
-  </div>
-</nav>
+ <Header></Header>
   <section id='banner'>
   <div className='container'>
       <div className='row'>
@@ -51,7 +31,7 @@ export default function Home()
         </div>
         <div className='col-md-6'>
           <Link to="#">
-                  {/* <img className="productimg"  data-aos="fade-left" src={process.env.PUBLIC_URL + '/images/homeimages/'+ data[0].section1.images3} alt=""/> */}
+                  <img className="productimg img-fluid mt-5"  data-aos="fade-left" src={process.env.PUBLIC_URL + '/images/homeimages/'+ data[0].section1.images3} alt="" />
           </Link>
         </div>
       </div>

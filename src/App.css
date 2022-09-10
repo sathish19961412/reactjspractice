@@ -10,6 +10,11 @@
 {
   float:center;
 }
+a:hover
+{
+ text-decoration:none !important;
+ color: #c1ce0f !important;
+}
 .productimg
 {
   width:auto;
@@ -18,6 +23,26 @@
 .text-1
 {
   text-align: center;
+}
+.about-color
+{
+  color:#2fd761;
+}
+.about-color1
+{
+  color:#2f7ad7;
+  font-weight: 600;
+}
+#why
+{
+  background-color:#2f7ad7;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+.para
+{
+  font-size: 18px;
+  color:white;
 }
 #banner
 {
@@ -58,7 +83,7 @@ th
 {
   margin-top: 5%;
   padding-top:5%;
-  padding-bottom:5%;
+  padding-bottom:3%;
   background: #1a3058;
 }
 .footer-1

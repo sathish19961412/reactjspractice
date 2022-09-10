@@ -6,7 +6,7 @@
         "subtitle":"Join thousands of Dentists worldwide who are currently preparing to be a Dentist in the UK.",
         "images1":"applestore.png",
         "images2":"googleplay.png",
-        "images3":"bannerimage.avif"
+        "images3":"dental.png"
         },
 
         "section2":
@@ -93,6 +93,11 @@
            "logo_description":"When it comes to money, there's no room for compromise. We've built Plum from the ground up with your security and privacy in mind. Need a hand? You can chat directly to our team through your Plum app. Alternatively, you can email or call us.",
            "quick_link":"Quick Link",
            "contactus":"Contact Us"
+        },
+
+        "section5":
+        {
+         
         }
     }
 ]
