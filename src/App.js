@@ -1,0 +1,42 @@
+import {Component} from 'react';
+import Table from './Table';
+class App extends Component
+{
+  state = {
+    character:[{
+      name:'sathish',
+      job:'Developer',
+    },
+    {
+      name:'mathew',
+      job:'Designer',
+    },
+    {
+      name:'sathish1',
+      job:'Developer',
+    },
+    {
+      name:'sathish mathew',
+      job:'UI/UX',
+    },]
+}
+
+  removecharacter =(index)=>{
+    const {character} =this.state
+    let filter=character.filter((character,i)=>{
+        return i!==index
+    });
+     this.setState({character:filter});
+  }
+  render(){
+    const {character}=this.state
+    return(
+      <div className='App mt-5'>
+           <Table removecharacter={this.removecharacter} characterData={character} />
+      </div>
+    );
+  }
+}
+
+export default App;
+
