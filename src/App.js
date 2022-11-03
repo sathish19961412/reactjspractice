@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import ApiExample from './ApiExample';
 import Form from './Form';
 import Table from './Table';
 
@@ -25,6 +26,7 @@ class App extends Component
       <div className='App mt-5'>
            <Table removecharacter={this.removecharacter} characterData={character} />
            <Form handleSubmit={this.handleSubmit} />
+           <ApiExample />
       </div>
     );
   }
