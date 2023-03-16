@@ -1,0 +1,104 @@
+[
+    {
+        "section1" : 
+        {
+        "title": "The leading Customer Application for your daily workspace.",
+        "subtitle":"Join thousands of Dentists worldwide who are currently preparing to be a Dentist in the UK.",
+        "images1":"applestore.png",
+        "images2":"googleplay.png",
+        "images3":"dental.png",
+        "logo":"logo.png"
+        },
+
+        "section2":
+        {
+          "title":"Secure & helpful",
+          "content":"When it comes to money, there's no room for compromise. We've built Plum from the ground up with your security and privacy in mind. Need a hand? You can chat directly to our team through your Plum app. Alternatively, you can email or call us."
+        },
+
+        "section4":
+       {
+        "column" : [
+          {
+            "subscribeType" : "",
+            "subscribeColTitle": "All options are free for 30 days. Cancel, upgrade or downgrade at any time.",
+            "price": ""
+          },
+          
+          {
+            "subscribeType" : "Free",
+            "subscribeColTitle": "No-frills features, interest for your savings and stock investing",
+            "price": "0.50% AER"
+          },
+          {
+            "subscribeType" : "£1/mo",
+            "subscribeColTitle": "Investing made simple and our best interest rate for your savings",
+            "price": "0.50% AER"
+          },
+          {
+            "subscribeType" : "£2.99/mo",
+            "subscribeColTitle": "Advanced Rules, Cashback, and investing made simple",
+            "price": "0.50% AER"
+          },
+          {
+            "subscribeType" : "£4.99/mo",
+            "subscribeColTitle": "Avoid overspending with Money Maximiser and the Plum Card",
+            "price": "0.50% AER"
+          }
+        ],
+        "row": [
+          {
+            "subscribeRowTitle" : "Commission-free trades*",
+            "subscribeRowTitleDescription": "Choose from +500 brands like Apple and Tesla.",
+            "subscribeRowTitleDescriptionQuotes": "*Other fees apply, Capital at risk",
+            "icon" : [
+              "fa-check",
+              "fa-times",
+              "fa-times",
+              "fa-check"
+            ]
+          },
+          {
+            "subscribeRowTitle" : "Your pensions in one place",
+            "subscribeRowTitleDescription": "",
+            "subscribeRowTitleDescriptionQuotes": "",
+            "icon" : [
+              "fa-check",
+              "fa-check",
+              "fa-times",
+              "fa-check"
+            ]
+          }
+
+        ],
+        "priceDiscription" : {
+          "subscribeRowTitle": "Earn interest",
+          "subscribeRowTitleDescription": "Easy Access Interest Pocket provided by Investec Bank, FSCS protected (Opt-in)"
+        }
+       },
+
+        "contactus" : 
+        {
+          "title": "Contact Us",
+          "firstname":"First Name",
+          "Lastname" :"Last Name",
+          "Email" :"Email Address",
+          "Mobile":"Mobile Number",
+          "Message":"Message",
+          "ButtonText":"Submit"
+        },
+
+        "footer":
+        {
+           "logo":"TestLogo",
+           "logo_description":"When it comes to money, there's no room for compromise. We've built Plum from the ground up with your security and privacy in mind. Need a hand? You can chat directly to our team through your Plum app. Alternatively, you can email or call us.",
+           "quick_link":"Quick Link",
+           "contactus":"Contact Us"
+        },
+
+        "section5":
+        {
+         
+        }
+    }
+]

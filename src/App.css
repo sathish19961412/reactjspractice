@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;1,100;1,200;1,300;1,400;1,500&display=swap');
+.App {
+  text-align:left;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.App3
+{
+  float:center;
+}
+a:hover
+{
+ text-decoration:none !important;
+ color: #c1ce0f !important;
+}
+.productimg
+{
+  width:auto;
+  height:60%;
+}
+.text-1
+{
+  text-align: center;
+}
+.about-color
+{
+  color:#2fd761;
+}
+.about-color1
+{
+  color:#2f7ad7;
+  font-weight: 600;
+}
+#why
+{
+  background-color:#2f7ad7;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+.para
+{
+  font-size: 18px;
+  color:white;
+}
+#banner
+{
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+#banner1
+{
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+.sub-1
+{
+  color:#6c757d ;
+  font-family: 'Montserrat', sans-serif;
+}
+.sub-2
+{
+  color:#6c757d ;
+  font-family: 'Montserrat', sans-serif;
+  font-size:20px;
+  text-align: center;
+}
+.fa
+{
+  color:#1a3058;
+}
+.table thead th 
+{
+  color: #1a3058;
+  padding: 3%;
+}
+th
+{
+  padding: 3% !important;
+}
+#footer
+{
+  margin-top: 5%;
+  padding-top:5%;
+  padding-bottom:3%;
+  background: #1a3058;
+}
+.footer-1
+{
+  color:#ffffff;
+  font-weight: 700;
+}
+.table
+{
+  background:#f0f6fa !important;
+}
+.sub-title {
+  font-size: 0.8rem;
+}
+.banner-haead-1
+{
+  color: #1a3058;
+  font-size: 39px;
+  font-weight: bold;
+  /* max-width: 719px; */
+  text-align: justify;
+  line-height: 50px;
+  text-transform: capitalize;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 3px 10px rgb(64 60 67 / 30%);
+}
+.heading
+{
+  font-family: "Calibre-Bold",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+font-size: 3rem;
+font-weight: 600;
+line-height: 1;
+color: #1a3058;
+z-index: 1;
+margin: 30px;
+text-align: center;
+text-shadow: 2px 3px 10px rgb(64 60 67 / 30%);
+}
+.para-1
+{
+    text-align: justify;
+    line-height: 25px;
+    text-transform: capitalize;
+    width: 68%;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+}
+.gp-1
+{
+  position: absolute;
+}
+.as-1
+{
+  position: relative;
+  left: 34%;
+}
+.banner-haead-2
+{
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and(max-width:767px)
+{
+  
+}
