@@ -59,9 +59,11 @@ export default function Footer()
                 <div className="row">
                     <div className="col-md-12 mt-2">
                         <div className="d-flex justify-content-center">
-                            <p className="text-white font-weight-bold">
-                               @Copyright By Media Wonderz | 2024
-                            </p>
+                            <a href="https://mediawonderz.com/" target="_blank">
+                                <p className="text-white font-weight-bold">
+                                @Copyright By Media Wonderz | 2024
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>

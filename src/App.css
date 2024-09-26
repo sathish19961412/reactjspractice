@@ -33,6 +33,22 @@ a:hover
   color:#2f7ad7;
   font-weight: 600;
 }
+.navbar-nav li:hover >ul.dropdown-menu{
+  display:block;
+}
+.dropdown-menu{
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top:0;
+  left:100%;
+  margin-top:70px;
+}
+
+.dropdown-menu > li > a:hover:after {
+  text-decoration: underline;
+  transform: rotate(-90deg);
+} 
 #why
 {
   background-color:#2f7ad7;
