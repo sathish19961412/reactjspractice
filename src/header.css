@@ -1,6 +1,12 @@
-.navbar
+/* .navbar
 {
   background:#2f7ad7;
+} */
+.nav-link {
+  display: block;
+  padding:1rem ;
+  color: #000;
+  font-size: 16px;
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link
 {
@@ -9,7 +15,7 @@
 }
 .navbar-light .navbar-nav .nav-link
 {
-    text-indent: 96px;
+
     color:#ffffff;
     font-weight: bold;
 }
@@ -17,11 +23,6 @@
 {
     color: cornsilk;
     font-weight: bold;
-}
-.navbar-expand-lg .navbar-nav
-{
-  position: relative;
-  left:24%;
 }
 .navbar-light .navbar-brand
 {

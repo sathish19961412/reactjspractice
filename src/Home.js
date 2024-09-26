@@ -1,137 +1,146 @@
-import data from './data/Homedata.json';
+
 import { Fragment } from "react";
-import { Table } from 'react-bootstrap';
 import './App.css';
-import {Link} from "react-router-dom";
 import Footer  from './Footer';
+import Slider1 from './assets/img/banner.jpg'
+import img1 from './assets/img/c-1.jpg';
+import img2 from './assets/img/c-2.jpg';
+import img3 from './assets/img/c-3.jpg';
+import img4 from './assets/img/c-4.jpg';
+import img5 from './assets/img/c-5.jpg';
+import img6 from './assets/img/c-6.jpg';
+import img7 from './assets/img/c-7.jpg';
+import img8 from './assets/img/c-8.jpg';
+import prebanner from './assets/img/pre-school.jpg'
+import newborn1 from './assets/img/n-1.jpg';
+import newborn2 from './assets/img/n-2.jpg';
+import newborn3 from './assets/img/n-3.jpg';
+import newborn4 from './assets/img/n-4.jpg';
+import newborn5 from './assets/img/n-5.jpg';
+import newborn6 from './assets/img/n-6.jpg';
+import news from './assets/img/news.jpg';
 import Header  from './Header';
 export default function Home()
 {
       return(
         <Fragment>
- <Header></Header>
-  <section id='banner'>
-  <div className='container'>
-      <div className='row'>
-        <div className='col-md-6 mt-5'>
-            <h1 className='banner-haead-1'>{data[0].section1.title}</h1>
-            <h5 className='sub-1'>{data[0].section1.subtitle}</h5>
-            <div className='mt-5'>
-                <div className='gp-1'>
-                <Link to="#">
-                  <img className="applestore-img"  data-aos="fade-left" src={process.env.PUBLIC_URL + '/images/homeimages/'+ data[0].section1.images1} alt=""/>
-                </Link>
+        <Header></Header>
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src={Slider1} class="img-fluid" alt="..."></img>
+              
                 </div>
-                <div className='as-1'>
-                  <Link to="#">
-                    <img className="applestore-img"  data-aos="fade-left" src={process.env.PUBLIC_URL + '/images/homeimages/'+ data[0].section1.images2} alt=""/>
-                  </Link>
+                <div class="carousel-item">
+                <img src={Slider1} class="img-fluid" alt="..."></img>
+               
+                </div>
+                <div class="carousel-item">
+                <img src={Slider1} class="img-fluid" alt="..."></img>
                 </div>
             </div>
         </div>
-        <div className='col-md-6'>
-          <Link to="#">
-                  <img className="productimg img-fluid mt-5"  data-aos="fade-left" src={process.env.PUBLIC_URL + '/images/homeimages/'+ data[0].section1.images3} alt="" />
-          </Link>
-        </div>
-      </div>
-  </div>
-
-</section>
-
-<section id="banner">
-     <div className='container'>
-          <div className='row'>
-              <div className='col-md-12'>
-                 <h1 className='text-center heading'>{data[0].section2.title}</h1>
-                 <p className='sub-2 '>{data[0].section2.content}</p>
-              </div>
-          </div>
-     </div>
-</section>
-<section className="feature-section">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="features-area">
-                                <Table responsive="sm" className='table'>
-                                    <thead>
-                                        <tr>
-
-                                            {
-                                                data[0].section4.column.map((item) => (
-                                                    <th className="amount-in-rupees" key={item.subscribeType}>{item.subscribeType}</th>
-                                                ))
-                                            }
-                                        </tr>
-                                        <tr>
-
-                                            {
-                                                data[0].section4.column.map((item) => (
-                                                    <th className="sub-title" key={item.subscribeColTitle}>{item.subscribeColTitle}</th>
-                                                ))
-                                            }
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr >
-                                        <th>
-                                            {data[0].section4.priceDiscription.subscribeRowTitle}
-
-                                            <h6 className="sub-title">
-
-                                                {data[0].section4.priceDiscription.subscribeRowTitleDescription}
-                                            </h6>
-                                        </th>
-                                    {
-                                        data[0].section4.column.map((item) => (
-                                            (item.price !== "") ?
-                                                <td key={item.price}>
-                                                    <br/>
-                                                    <h4 className="percentage">{item.price}</h4>
-                                                </td>
-
-                                                : ""
-                                        ))
-                                    }
-                                    </tr>
-
-
-                                       {
-                                           data[0].section4.row.map((item) => (
-                                               <tr>
-                                               <th>
-                                                   {item.subscribeRowTitle}
-                                                   <br/>
-                                                   <h6 className="sub-title">
-                                                       {item.subscribeRowTitleDescription}
-                                                       <span>
-                                                    {item.subscribeRowTitleDescriptionQuotes}
-                                                </span>
-                                                   </h6>
-                                               </th>
-                                                   {
-                                                       item.icon.map((items) => (
-                                                       <td>
-                                                       <h4 className="tick-style"><i className={"fa " + items} aria-hidden="true"></i></h4>
-                                                       </td>
-                                                       ))
-                                                   }
-                                               </tr>
-
-                                           ))
-                                       }
-
-
-                                    </tbody>
-                                </Table>
-                            </div>
-                        </div>
+        <section id='banner'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-md-12 '>
+                        <h1 className='banner-haead-1'>Clothing Style</h1>
                     </div>
                 </div>
-            </section>
-           <Footer></Footer>
-</Fragment>
+                <div className='row mt-3'>
+                    <div className='col-md-2'>
+                        <img src={img1} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img2} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img3} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img4} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img5} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img6} class="img-fluid" alt="..."></img>
+                    </div>
+                </div>
+                <div className='row mt-3'>
+                    <div className='col-md-2'>
+                        <img src={img7} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img8} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img1} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img4} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img2} class="img-fluid" alt="..."></img>
+                    </div>
+                    <div className='col-md-2'>
+                        <img src={img3} class="img-fluid" alt="..."></img>
+                    </div>
+                </div>
+                <div className='row mt-5'>
+                    <div className='col-md-12'>
+                        <img src={prebanner} class="img-fluid" alt="..."></img>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='banner'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-md-12 '>
+                        <h1 className='banner-haead-1'>Newborn Essentials</h1>
+                    </div>
+                </div>
+                <div className='row mt-3'>
+                    <div className='col-md-3'>
+                        <img src={newborn1} class="img-fluid" alt="..."></img>
+                        <h5 className="text-center pt-1">Cotton Wrap Bed</h5>
+                    </div>
+                    <div className='col-md-3'>
+                        <img src={newborn2} class="img-fluid" alt="..."></img>
+                        <h5 className="text-center pt-1">Cotton Wrap Bed</h5>
+                    </div>
+                    <div className='col-md-3'>
+                        <img src={newborn3} class="img-fluid" alt="..."></img>
+                        <h5 className="text-center pt-1">Cotton Wrap Bed</h5>
+                    </div>
+                    <div className='col-md-3'>
+                        <img src={newborn4} class="img-fluid" alt="..."></img>
+                        <h5 className="text-center pt-1">Cotton Wrap Bed</h5>
+                    </div>
+                </div>
+                <div className='row mt-3'>
+                    <div className='col-md-3'>
+                        <img src={newborn5} class="img-fluid" alt="..."></img>
+                        <h5 className="text-center pt-1">Cotton Wrap Bed</h5>
+                    </div>
+                    <div className='col-md-3'>
+                        <img src={newborn6} class="img-fluid" alt="..."></img>
+                        <h5 className="text-center pt-1">Cotton Wrap Bed</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+             <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <img src={news} className="img-fluid"></img>
+                    </div>
+                </div>
+             </div>
+        </section>
+        <Footer></Footer>
+        </Fragment>
       );
 }

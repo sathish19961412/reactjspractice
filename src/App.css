@@ -44,9 +44,25 @@ a:hover
   font-size: 18px;
   color:white;
 }
+.border-25
+{
+  border-radius:25px;
+  padding:5px;
+  position:relative;
+  top: 40px;
+
+}
+.foo-5
+{
+  font-size:38px;
+}
+#address
+{
+  color:#ffffff;
+}
 #banner
 {
-  padding-top: 4%;
+  padding-top: 2%;
   padding-bottom: 4%;
 }
 #banner1
