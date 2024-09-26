@@ -54,13 +54,13 @@ export default function Footer()
                 </div>
             </div>
         </section>
-        <section className="pt-3 pb-3">
+        <section className="bg-danger">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 mt-2">
                         <div className="d-flex justify-content-center">
-                            <p>
-
+                            <p className="text-white font-weight-bold">
+                               @Copyright By Media Wonderz | 2024
                             </p>
                         </div>
                     </div>
